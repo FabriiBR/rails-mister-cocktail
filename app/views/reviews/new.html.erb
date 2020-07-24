@@ -1,0 +1,9 @@
+<%= simple_form_for [ @cocktail, @review ] do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+  <%= t.label :content %>
+  <%= t.text_field :content %>
+  <%= t.submit %>
+<% end %>
+
+<%= link_to "Back to home", root_path %>

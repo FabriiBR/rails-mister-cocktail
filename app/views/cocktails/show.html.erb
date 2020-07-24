@@ -12,5 +12,19 @@
   </li>
   <% end %>
 </ol>
+<h3>Reviews</h3>
+<ol>
+  <% @cocktail.reviews.each do |review| %>
+  <li>
+    <a><%= review.name %>:</a>
+    <a><%= review.content %></a>
+    <a><%= link_to "Delete",
+            cocktail_review_path(@cocktail, review),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></a>
+  </li>
+  <% end %>
+</ol>
+<a><%= link_to "Create new review", new_cocktail_review_path(@cocktail) %></a>
 <a><%= link_to "Create new dose", new_cocktail_dose_path(@cocktail) %></a>
 <%= link_to "Back to home", root_path %>
