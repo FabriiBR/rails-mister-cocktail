@@ -1,0 +1,7 @@
+<%= form_for(@cocktail) do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+  <%= t.submit %>
+<% end %>
+
+<%= link_to "Back to home", root_path %>

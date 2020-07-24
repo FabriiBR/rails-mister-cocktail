@@ -1,0 +1,8 @@
+<%= simple_form_for [ @cocktail, @dose ] do |t| %>
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+  <%= t.association :ingredient%>
+  <%= t.submit %>
+<% end %>
+
+<%= link_to "Back to home", root_path %>
